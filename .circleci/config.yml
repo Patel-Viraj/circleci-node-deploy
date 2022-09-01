@@ -7,13 +7,13 @@ workflows:
 
 jobs:
   test:
-    machine: true
-    resource_class: patel-viraj/linux
-   # docker:
-    #  - image: cimg/node:14.13.0
+    docker:
+      - image: cimg/node:14.13.0
     steps:
-      - run: echo "Hi I'm on Runners!"
-#       - checkout
-#       - run: node --version
-#       - run: npm i
-#       - run: pm2 start app.js
+      - checkout
+      - run: 
+          name: Install dependences
+          command: npm i
+      - run:
+          name: ssh
+          command: ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237
