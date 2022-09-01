@@ -23,5 +23,7 @@ jobs:
           command: | 
             ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
             cd /home/ubuntu/circleci-node-deploy 
+            mkdir test
             npm i
-            node app.js
+            npm install pm2@latest -g
+            pm2 start app.js
