@@ -13,4 +13,5 @@ jobs:
       - checkout
       - run: node --version
       - run: npm i
+      - run: npm install pm2@latest -g
       - run: node app.js
