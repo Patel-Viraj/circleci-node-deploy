@@ -20,5 +20,8 @@ jobs:
 #                    rsync -v . ubuntu@54.83.108.237:/home/ubuntu/node/
       - run:
           name: ssh
-          command: ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
-                   mkdir test
+          command: | 
+            ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
+            cd /home/ubuntu/circleci-node-deploy 
+            npm i
+            node app.js
