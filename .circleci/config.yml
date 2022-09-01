@@ -13,4 +13,4 @@ jobs:
       - checkout
       - run: node --version
       - run: npm i
-      - run: npm start app.js
+      - run: node start app.js
