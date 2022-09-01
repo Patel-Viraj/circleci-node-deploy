@@ -16,4 +16,5 @@ jobs:
           command: npm i
       - run:
           name: ssh
-          command: ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 && mkdir test
+          command: ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
+                   mkdir test
