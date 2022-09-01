@@ -14,11 +14,9 @@ jobs:
       - run: 
           name: Install dependences
           command: npm i
-      - run:
-          name: ssh
-          command: | 
+      - run: | 
             ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237
-            mkdir test
+                 mkdir test
   #          cd  circleci-node-deploy
   #          npm i            
   #          sudo npm install pm2@latest -g
