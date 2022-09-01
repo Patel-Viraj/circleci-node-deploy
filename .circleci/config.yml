@@ -7,10 +7,13 @@ workflows:
 
 jobs:
   test:
-    docker:
-      - image: cimg/node:14.13.0
+    machine: true
+    resource_class: patel-viraj/linux
+   # docker:
+    #  - image: cimg/node:14.13.0
     steps:
-      - checkout
-      - run: node --version
-      - run: npm i
-      - run: pm2 start app.js
+      - run: echo "Hi I'm on Runners!"
+#       - checkout
+#       - run: node --version
+#       - run: npm i
+#       - run: pm2 start app.js
