@@ -14,6 +14,7 @@ jobs:
       - run: 
           name: Install dependences
           command: npm i
-      - run: ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
-                 npm i \        
-                 pm2 start app.js
+      - run: |
+            ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
+            npm i        
+          #  pm2 start app.js
