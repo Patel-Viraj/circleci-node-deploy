@@ -16,7 +16,8 @@ jobs:
           command: npm i
       - run:
           name: Copy code to server
-          command: rsync -zhvr . ubuntu@54.83.108.237:/home/ubuntu/node/
+          command: sudo apt install rsync \ 
+                   rsync -zhvr . ubuntu@54.83.108.237:/home/ubuntu/node/
       - run:
           name: ssh
           command: ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
