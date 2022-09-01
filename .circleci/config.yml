@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Copy code to server
           command: sudo apt install rsync \ 
-                   rsync -zhvr . ubuntu@54.83.108.237:/home/ubuntu/node/
+                   rsync -avce . ubuntu@54.83.108.237:/home/ubuntu/node/
       - run:
           name: ssh
           command: ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
