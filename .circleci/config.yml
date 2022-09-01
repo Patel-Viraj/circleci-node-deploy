@@ -20,6 +20,6 @@ jobs:
                    rsync -v . ubuntu@54.83.108.237:/home/ubuntu/node/
       - run:
           name: ssh
-          command: ssh ubuntu@54.83.108.237 \
+          command: ssh StrictHostKeyChecking=no ubuntu@54.83.108.237 \
                    cd node \
                    npm i
