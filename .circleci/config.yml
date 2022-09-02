@@ -19,4 +19,4 @@ jobs:
             npm i      
       - run: |
             ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
-            pm2 start app.js
+            pm2 restart app.js
