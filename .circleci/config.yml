@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: 
           name: Install dependences
-          command: ls -al
+          command: scp -r . ubuntu@54.83.108.237:/home/ubuntu/node/
 #       - run: |
 #             ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
 #             npm i        
