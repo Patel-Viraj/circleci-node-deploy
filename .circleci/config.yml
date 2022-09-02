@@ -15,8 +15,8 @@ jobs:
           name: Install dependences
           command: scp -r -o StrictHostKeyChecking=no * ubuntu@54.83.108.237:/home/ubuntu/node/ 
       - run: |
-            ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237:/home/ubuntu/node/ \
-            npm i        
-      - run: |
-            ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237:/home/ubuntu/node/ \
-            pm2 start app.js
+            ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 
+            mkdir test       
+#       - run: |
+#             ssh -o StrictHostKeyChecking=no ubuntu@54.83.108.237 \
+#             pm2 start app.js
